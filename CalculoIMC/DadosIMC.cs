@@ -45,15 +45,19 @@ namespace CalculoIMC
         }
 
         public void setSexo(string sexo)
+
         {
-            if(sexo == "F"  || sexo == "M")
+            var upSexo = sexo.Substring(0, 1).ToUpper();
+
+            if (upSexo == "F"  || upSexo == "M")
             {
-                this.sexo = sexo.Substring(0, 1).ToUpper();
+                this.sexo = upSexo;
             }
             else 
             {
-                Console.Write("Informe o sexo corretamente: ");
-                setSexo(Convert.ToString(Console.ReadLine()));
+                    Console.SetCursorPosition(Console.CursorLeft, Console.CursorTop - 1);
+                    Console.Write("Informe o sexo corretamente: ");
+                    setSexo(Convert.ToString(Console.ReadLine()));
             }
         }
 
@@ -88,7 +92,11 @@ namespace CalculoIMC
 
         public void ClassificacaoIMC()
         {
-            if(sexo == "F")
+
+            var upSexo = sexo.Substring(0, 1).ToUpper();
+
+
+            if (upSexo == "F")
             {
                 if(imc < 19.5)
                 {
@@ -110,9 +118,11 @@ namespace CalculoIMC
                 {
                     classificacao = "Obeso";
                 }
+
+                sexo = "Feminino";
             }
 
-            else if (sexo == "M")
+            else if (upSexo == "M")
             {
                 if (imc < 20.7)
                 {
@@ -134,11 +144,13 @@ namespace CalculoIMC
                 {
                     classificacao = "Obeso";
                 }
+
+                sexo = "Masculino";
             }
 
             else
             {
-                Console.WriteLine("Informe corretamente o sexo");
+                Console.WriteLine("Algo deu errado, tente novamente!");
             }
         }
     }

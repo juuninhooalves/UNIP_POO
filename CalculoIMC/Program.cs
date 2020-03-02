@@ -45,6 +45,10 @@ namespace CalculoIMC
 
             Console.ReadKey();
 
+            //Console.WriteLine("Line 1");
+            //Console.SetCursorPosition(Console.CursorLeft, Console.CursorTop - 1);
+            //Console.WriteLine("Line 2");
+            //Console.ReadKey();
         }
     }
 }
