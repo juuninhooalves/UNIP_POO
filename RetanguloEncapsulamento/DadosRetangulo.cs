@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RetanguloEncapsulamento
 {
-    class DadosRetangulo
+    public class DadosRetangulo
     {
         private double ladoA;
         private double ladoB;
@@ -22,6 +22,14 @@ namespace RetanguloEncapsulamento
         }
 
         public DadosRetangulo(double ladoA, double ladoB)
+        {
+            this.ladoA = 0;
+            this.ladoB = 0;
+            this.perimetro = 0;
+            this.area = 0;
+        }
+
+        public DadosRetangulo(double ladoA, double ladoB, double ladoC)
         {
             this.ladoA = 0;
             this.ladoB = 0;

@@ -24,7 +24,7 @@ namespace RetanguloEncapsulamento
             // processamento
 
            Retangulo.calcularPerimetro();
-            Retangulo.calcularArea();
+           Retangulo.calcularArea();
 
 
             Console.WriteLine();
