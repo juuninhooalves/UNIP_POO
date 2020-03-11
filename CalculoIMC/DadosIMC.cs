@@ -34,6 +34,12 @@ namespace CalculoIMC
             return peso;
         }
 
+        public double Peso
+        {
+            get { return peso; }
+            set { peso = value; }
+        }
+
         public void setAltura(double altura)
         {
             this.altura = altura;

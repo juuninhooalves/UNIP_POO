@@ -42,6 +42,7 @@ namespace CalculoIMC
             Console.WriteLine("Sexo           : " + dados.getSexo());
             Console.WriteLine("IMC            : " + dados.getIMC());
             Console.WriteLine("Classificação  : " + dados.getClassificacao());
+            Console.WriteLine("==================================");
 
             Console.ReadKey();
 
