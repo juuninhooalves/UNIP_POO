@@ -17,9 +17,9 @@ namespace RetanguloEncapsulamento
             Console.WriteLine();
 
             Console.WriteLine("Digite o lado A: ");
-            Retangulo.setLadoA(Convert.ToDouble(Console.ReadLine()));
+            Retangulo.ladoA = (Convert.ToDouble(Console.ReadLine()));
             Console.WriteLine("Digite o lado B: ");
-            Retangulo.setLadoB(Convert.ToDouble(Console.ReadLine()));
+            Retangulo.ladoB = (Convert.ToDouble(Console.ReadLine()));
 
             // processamento
 
@@ -29,10 +29,10 @@ namespace RetanguloEncapsulamento
 
             Console.WriteLine();
             Console.WriteLine("  ===== RETANGULO ============");
-            Console.WriteLine("Lado A    = " + Retangulo.getLadoA());
-            Console.WriteLine("Lado B    = " + Retangulo.getLadoB());
-            Console.WriteLine("Perimetro = " + Retangulo.getPerimetro());
-            Console.WriteLine("Area      = " + Retangulo.getArea());
+            Console.WriteLine("Lado A    = " + Retangulo.ladoA);
+            Console.WriteLine("Lado B    = " + Retangulo.ladoB);
+            Console.WriteLine("Perimetro = " + Retangulo.perimetro);
+            Console.WriteLine("Area      = " + Retangulo.area);
 
             Console.WriteLine("Tecle <Enter> para continuar: ");
             Console.ReadKey();
