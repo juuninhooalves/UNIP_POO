@@ -13,8 +13,13 @@ namespace CalculoIMC
         private double imc;
         private string sexo;
         private string classificacao;
+        private string nv1 = "Abaixo do Peso";
+        private string nv2 = "No peso normal";
+        private string nv3 = "Marginalmente acima do peso";
+        private string nv4 = "Acima do Peso";
+        private string nv5 = "Obeso";
 
-       public DadosIMC() 
+        public DadosIMC() 
         {
             this.peso = 0;
             this.altura = 0;
@@ -22,7 +27,6 @@ namespace CalculoIMC
             this.sexo = "";
             this.classificacao = "";
         }
-
 
         public void setPeso(double peso)
         {
@@ -106,23 +110,23 @@ namespace CalculoIMC
             {
                 if(imc < 19.5)
                 {
-                    classificacao = "Abaixo do Peso";
+                    classificacao = nv1;
                 }
                 else if(imc >= 19.5 && imc < 25.7)
                 {
-                    classificacao = "No peso normal";
+                    classificacao = nv2;
                 }
                 else if (imc >= 25.7 && imc < 27.3)
                 {
-                    classificacao = "Marginalmente acima do peso";
+                    classificacao = nv3;
                 }
                 else if (imc >= 27.3 && imc < 32.3)
                 {
-                    classificacao = "Acima do peso";
+                    classificacao = nv4;
                 }
                 else
                 {
-                    classificacao = "Obeso";
+                    classificacao = nv5;
                 }
 
                 sexo = "Feminino";
@@ -132,23 +136,23 @@ namespace CalculoIMC
             {
                 if (imc < 20.7)
                 {
-                    classificacao = "Abaixo do Peso";
+                    classificacao = nv1;
                 }
                 else if (imc >= 20.7 && imc < 26.4)
                 {
-                    classificacao = "No peso normal";
+                    classificacao = nv2;
                 }
                 else if (imc >= 26.4 && imc < 27.8)
                 {
-                    classificacao = "Marginalmente acima do peso";
+                    classificacao = nv3;
                 }
                 else if (imc >= 27.8 && imc < 31.1)
                 {
-                    classificacao = "Acima do peso";
+                    classificacao = nv4;
                 }
                 else
                 {
-                    classificacao = "Obeso";
+                    classificacao = nv5;
                 }
 
                 sexo = "Masculino";
