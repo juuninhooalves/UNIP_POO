@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace RetanguloEncapsulamento
 {
-    public class DadosRetangulo
+    class MetodoProfessor
     {
-        private double ladoA { get; set; }
-        private double ladoB { get; set; }
-        private double perimetro { get; set; }
-        private double area { get; set; }
+        private double ladoA;
+        private double ladoB;
+        private double perimetro;
+        private double area;
 
-        public DadosRetangulo()
+        public MetodoProfessor()
         {
             this.ladoA = 0;
             this.ladoB = 0;
@@ -21,7 +21,7 @@ namespace RetanguloEncapsulamento
             this.area = 0;
         }
 
-        public DadosRetangulo(double ladoA, double ladoB)
+        public MetodoProfessor(double ladoA, double ladoB)
         {
             this.ladoA = 0;
             this.ladoB = 0;
@@ -29,7 +29,7 @@ namespace RetanguloEncapsulamento
             this.area = 0;
         }
 
-        public DadosRetangulo(double ladoA, double ladoB, double ladoC)
+        public MetodoProfessor(double ladoA, double ladoB, double ladoC)
         {
             this.ladoA = 0;
             this.ladoB = 0;
@@ -37,26 +37,31 @@ namespace RetanguloEncapsulamento
             this.area = 0;
         }
 
-        public double LadoA
+        public void setLadoA(double ladoA)
         {
-            get { return ladoA; }
-            set { this.ladoA = value; }
+            this.ladoA = ladoA;
+        }
+        public double getLadoA()
+        {
+            return ladoA;
+        }
+        public void setLadoB(double ladoB)
+        {
+            this.ladoB = ladoB;
+        }
+        public double getLadoB()
+        {
+            return ladoB;
         }
 
-        public double LadoB
+        public double getPerimetro()
         {
-            get { return ladoB; }
-            set { this.ladoB = value; }
+            return perimetro;
         }
 
-        public double Perimetro
+        public double getArea()
         {
-            get { return perimetro; }
-        }
-
-        public double Area
-        {
-            get { return area; }
+            return area;
         }
 
         public void calcularPerimetro()
