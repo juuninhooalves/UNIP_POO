@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CalculoIMC
 {
-    public class DadosIMC
+    class MetodoProfessor
     {
         private double peso;
         private double altura;
@@ -19,7 +19,7 @@ namespace CalculoIMC
         private string nv4 = "Acima do Peso";
         private string nv5 = "Obeso";
 
-        public DadosIMC() 
+        public MetodoProfessor()
         {
             this.peso = 0;
             this.altura = 0;
@@ -28,46 +28,57 @@ namespace CalculoIMC
             this.classificacao = "";
         }
 
-
-        public double Peso
+        public void setPeso(double peso)
         {
-            get { return peso; }
-            set { peso = value; }
+            this.peso = peso;
         }
 
-        public double Altura
+        public double getPeso()
         {
-            get { return altura; }
-            set { altura = value; }
+            return peso;
         }
 
-        public string Sexo
+
+        public void setAltura(double altura)
+        {
+            this.altura = altura;
+        }
+
+        public double getAltura()
+        {
+            return altura;
+        }
+
+        public void setSexo(string sexo)
 
         {
-            set
+            var upSexo = sexo.Substring(0, 1).ToUpper();
+
+            if (upSexo == "F" || upSexo == "M")
             {
-                var upSexo = sexo.Substring(0, 1).ToUpper();
-
-                if (upSexo == "F" || upSexo == "M")
-                {
-                    this.sexo = upSexo;
-                }
-                else
-                {
-                    Console.SetCursorPosition(Console.CursorLeft, Console.CursorTop - 1);
-                    Console.Write("Informe o sexo corretamente: ");
-                    Sexo = (Convert.ToString(Console.ReadLine()));
-                }
+                this.sexo = upSexo;
             }
-
-            get { return sexo; }
+            else
+            {
+                Console.SetCursorPosition(Console.CursorLeft, Console.CursorTop - 1);
+                Console.Write("Informe o sexo corretamente: ");
+                setSexo(Convert.ToString(Console.ReadLine()));
+            }
         }
 
-
-
-        public string Classificacao
+        public string getSexo()
         {
-            get { return classificacao; }
+            return sexo;
+        }
+
+        public double IMC()
+        {
+            return imc;
+        }
+
+        public string getClassificacao()
+        {
+            return classificacao;
         }
 
 
@@ -76,9 +87,9 @@ namespace CalculoIMC
             imc = peso / (altura * altura);
         }
 
-        public double IMC
+        public double getIMC()
         {
-            get { return imc; }
+            return imc;
         }
 
 
@@ -92,11 +103,11 @@ namespace CalculoIMC
 
             if (upSexo == "F")
             {
-                if(imc < 19.5)
+                if (imc < 19.5)
                 {
                     classificacao = nv1;
                 }
-                else if(imc >= 19.5 && imc < 25.7)
+                else if (imc >= 19.5 && imc < 25.7)
                 {
                     classificacao = nv2;
                 }

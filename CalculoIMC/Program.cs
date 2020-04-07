@@ -37,7 +37,7 @@ namespace CalculoIMC
             Console.WriteLine();
             Console.WriteLine("=========== Resultado IMC ==========");
             Console.WriteLine();
-            Console.WriteLine("Peso           : " + dados.getPeso());
+            Console.WriteLine("Peso           : " + dados.Peso);
             Console.WriteLine("Altura         : " + dados.getAltura());
             Console.WriteLine("Sexo           : " + dados.getSexo());
             Console.WriteLine("IMC            : " + dados.getIMC());
