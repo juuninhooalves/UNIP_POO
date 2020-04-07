@@ -19,13 +19,13 @@ namespace CalculoIMC
 
 
             Console.Write("Informe seu Peso: ");
-            dados.setPeso(Convert.ToDouble(Console.ReadLine()));
+            dados.Peso = (Convert.ToDouble(Console.ReadLine()));
 
             Console.Write("Informe sua Altura: ");
-            dados.setAltura(Convert.ToDouble(Console.ReadLine()));
+            dados.Altura = (Convert.ToDouble(Console.ReadLine()));
 
             Console.Write("Informe seu sexo: ");
-            dados.setSexo(Convert.ToString(Console.ReadLine()));
+            dados.Sexo = (Convert.ToString(Console.ReadLine()));
 
 
             //Processamento
@@ -38,10 +38,10 @@ namespace CalculoIMC
             Console.WriteLine("=========== Resultado IMC ==========");
             Console.WriteLine();
             Console.WriteLine("Peso           : " + dados.Peso);
-            Console.WriteLine("Altura         : " + dados.getAltura());
-            Console.WriteLine("Sexo           : " + dados.getSexo());
-            Console.WriteLine("IMC            : " + dados.getIMC());
-            Console.WriteLine("Classificação  : " + dados.getClassificacao());
+            Console.WriteLine("Altura         : " + dados.Altura);
+            Console.WriteLine("Sexo           : " + dados.Sexo);
+            Console.WriteLine("IMC            : " + dados.IMC);
+            Console.WriteLine("Classificação  : " + dados.Classificacao);
             Console.WriteLine("==================================");
 
             Console.ReadKey();
